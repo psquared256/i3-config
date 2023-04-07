@@ -190,3 +190,6 @@ bar {
 
 # Enable Natural Scrolling
 exec --no-startup-id ~/.config/i3/natural_scrolling.sh
+
+# Startup nitrogen
+exec always nitrogen --restore
