@@ -183,6 +183,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        position top
 }
 
 
@@ -195,14 +196,14 @@ exec --no-startup-id ~/.config/i3/natural_scrolling.sh
 exec --no-startup-id nitrogen --restore
 
 # startup picom
-exec picom
+exec_always --no-startup-id picom
 
 # Handle backlight
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
-#Disable focus follows mouse
+# Disable focus follows mouse
 focus_follows_mouse no
 
-#Enable Dark Mode
+# Enable Dark Mode
 exec --no-startup-id /usr/lib/gsd-xsettings
