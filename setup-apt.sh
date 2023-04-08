@@ -5,5 +5,5 @@ if (( $EUID != 0 )); then
 fi
 
 apt update
-apt install -y nitrogen light picom
+apt install -y nitrogen light picom main xclip
 chmod +s /usr/bin/light

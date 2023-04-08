@@ -196,7 +196,7 @@ exec --no-startup-id ~/.config/i3/natural_scrolling.sh
 exec --no-startup-id nitrogen --restore
 
 # startup picom
-exec_always --no-startup-id picom
+#exec_always --no-startup-id picom
 
 # Handle backlight
 bindsym XF86MonBrightnessUp exec light -A 5
@@ -207,3 +207,13 @@ focus_follows_mouse no
 
 # Enable Dark Mode
 exec --no-startup-id /usr/lib/gsd-xsettings
+
+## Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/i3_screens/$(date)"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/i3_screens/$(date)"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/i3_screens/$(date)"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
