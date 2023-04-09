@@ -196,7 +196,7 @@ exec --no-startup-id ~/.config/i3/natural_scrolling.sh
 exec --no-startup-id nitrogen --restore
 
 # startup picom
-#exec_always --no-startup-id picom
+exec always --no-startup-id picom --restore
 
 # Handle backlight
 bindsym XF86MonBrightnessUp exec light -A 5
